@@ -4,14 +4,10 @@ import {removeFeature} from '../actions/actions';
 
 const AddedFeature = props => {
 
-  const remove = (feature) => {
-    props.removeFeature(feature)
-  }
-
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick = {() => remove(props.feature)}>X</button>
+      <button className="button" onClick = {() => props.removeFeature(props.feature)}>X</button>
       {props.feature.name}
     </li>
   );

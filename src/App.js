@@ -37,10 +37,10 @@ const App = (props) => {
     <div className="boxes">
       <div className="box">
         <Header car={props.car} />
-        <AddedFeatures car={props.car} removeFeature = {removeFeature} />
+        <AddedFeatures car={props.car}/>
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} addFeature = {addFeature}/>
+        <AdditionalFeatures additionalFeatures={props.additionalFeatures}/>
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -59,4 +59,4 @@ const mapStateToProps = (state) => {
     additionalFeatures: state.additionalFeatures
   };
 }
-export default connect(mapStateToProps, {addFeature, removeFeature})(App)
+export default connect(mapStateToProps, {})(App)
